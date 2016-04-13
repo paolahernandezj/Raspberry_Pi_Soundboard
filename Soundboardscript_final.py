@@ -4,6 +4,7 @@ from pygame.mixer import Sound
 from signal import pause
 import time
 
+#this is a comment
 pygame.init()
 pygame.mixer.init()
 SOUND_END = pygame.USEREVENT+1

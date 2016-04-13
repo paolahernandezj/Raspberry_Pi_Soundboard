@@ -1,0 +1,28 @@
+
+
+
+
+
+while (True):
+       time.sleep(1)
+       for b in soundButtons:
+               if b.button.is_pressed:
+                       print "button is pressed"
+       button.when_pressed = pressed(self)
+       pause()
+
+
+
+button.when_pressed = button.pressed()
+       pause()
+
+
+
+
+
+while (True):
+       time.sleep(.15)
+       for event in pygame.event.get():
+		if event.type == SOUND_END:
+			soundButtons [current_sound_button_object].turn_off_led()
+			current_sound_button_object = -1

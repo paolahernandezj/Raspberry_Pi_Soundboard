@@ -54,19 +54,20 @@ soundButtons = []
 
 for index, item in enumerate(objs):
        sb = SoundButton(index, item["buttonPin"], item["ledPin"], item["soundFile"])
-       soundButtons.append(sb)
+       soundButtons.append(sb) """this section of the code defines which--
+                               items will be affected when the code is running"""
 
 for button in soundButtons:
    button.led.on()
    print 'led on'
-   time.sleep(0.15)
+   time.sleep(0.15) #defines how long the LED light will turn on for after it was ran (.15 of a second)
 
 for button in soundButtons:
    button.led.off()
    print 'led off'
-   time.sleep(0.15)
+   time.sleep(0.15) #button's LED light will turn off for this amount of time atfer the LED has been turned on
 
-print("button startup done")
+print("button startup done") #if this part of the script was ran correctly "button start up done" will be printed, if not there is an error
 
 while (True):
        time.sleep(1)
@@ -74,7 +75,7 @@ while (True):
 		if event.type == SOUND_END:
 			soundButtons [current_sound_button_object].turn_off_led()
 			current_sound_button_object = -1
-			print('success')
+			print('success') #after the button is pressed   
 
 		if pygame.mixer.music.get_busy() == True:
 			isPlaying = True
